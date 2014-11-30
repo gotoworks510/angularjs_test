@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja" ng-app>
+<head>
+<meta charset="utf-8">
+<title>AngularJS binding demo</title>
+<script src="../lib/angular.min.js"></script>
+</head>
+<body>
+<h1>始めての処理</h1>
+<input type="text" ng-model="name">
+<div>Hello {{name}}!</div>
+<h1>カッコ書きの例</h1>
+<input type="number" ng-model="num">
+<div>1 + {{num}} = {{1 + num}}</div>
+<h1>ng-showとng-hide</h1>
+<input type="number" ng-model="num1">
+<div ng-show="num1 != null">1 + {{num1}} = {{1 + num1}}</div>
+<br>
+<input type="number" ng-model="num2">
+<div ng-hide="num2 == null">1 + {{num2}} = {{1 + num2}}</div>
+
+</body>
+</html>
