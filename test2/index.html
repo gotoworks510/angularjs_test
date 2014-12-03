@@ -4,6 +4,14 @@
 <meta charset="utf-8">
 <title>AngularJS binding demo</title>
 <script src="../lib/angular.min.js"></script>
+<style>
+	.red{
+		color: red;
+	}
+	.blue{
+		color: blue;
+	}
+</style>
 </head>
 <body>
 <h1>始めての処理</h1>
@@ -18,6 +26,8 @@
 <br>
 <input type="number" ng-model="num2">
 <div ng-hide="num2 == null">1 + {{num2}} = {{1 + num2}}</div>
-
+<h1>ng-class</h1>
+<input type="number" ng-model="num">
+<div ng-class="{red:num > 100, blue: num < 50}">1 + {{num}} = {{1 + num}}</div>
 </body>
 </html>
