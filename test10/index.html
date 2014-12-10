@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ja" ng-app="myApp">
+<head>
+<meta charset="utf-8">
+<title>AngularJS incremental search demo</title>
+<script src="../lib/angular.min.js"></script>
+<script src="app.js"></script>
+</head>
+<body>
+<div ng-controller="MainCtrl">
+	<div>{{ name | truncateee }}</div>
+	<div>{{ name | truncateee:5 }}</div>
+	<div>{{ name | truncateee:4:'tetete' }}</div>
+</div>
+</body>
+</html>
