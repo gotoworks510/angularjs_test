@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja" ng-app="myApp">
+<head>
+<meta charset="utf-8">
+<title>AngularJS incremental search demo</title>
+<script src="../lib/angular.min.js"></script>
+<script src="app.js"></script>
+<style>
+	.even{
+		background: #eee;
+	}
+</style>
+</head>
+<body>
+<div ng-controller="MainCtrl">
+	<table>
+		<tr>
+			<th>Value</th>
+			<th>$index</th>
+			<th>$first</th>
+			<th>$middle</th>
+			<th>$last</th>
+			<th>$even</th>
+			<th>$odd</th>
+		</tr>
+		<tr ng-repeat="name in names" ng-class="{even: $even, last: $last}">
+			<td>{{name}}</td>
+			<td>{{$index}}</td>
+			<td>{{$first}}</td>
+			<td>{{$middle}}</td>
+			<td>{{$last}}</td>
+			<td>{{$even}}</td>
+			<td>{{$odd}}</td>
+		</tr>
+	</table>
+</div>
+</body>
+</html>
