@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja" ng-app="myApp">
+<head>
+<meta charset="utf-8">
+<title>AngularJS incremental search demo</title>
+<script src="../lib/angular.min.js"></script>
+<script src="app.js"></script>
+<style>
+	.even{
+		background: #eee;
+	}
+</style>
+</head>
+<body>
+
+<div ng-controller="MainCtrl">
+	<input type="search" ng-model="searchText">
+	<ul ng-repeat="member in members | filter:searchText">
+		<li>{{member.name}} ({{member.age}})</li>
+	</ul>
+</div>
+</body>
+</html>
