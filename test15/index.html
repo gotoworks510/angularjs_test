@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja" ng-app="myApp">
+<head>
+<meta charset="utf-8">
+<title>AngularJS incremental search demo</title>
+<script src="../lib/angular.min.js"></script>
+<script src="app.js"></script>
+<style>
+	.even{
+		background: #eee;
+	}
+</style>
+</head>
+<body>
+
+<div ng-controller="MainCtrl">
+	<div>
+		<input type="search" name="search" ng-model="search">
+	</div>
+	<div>
+	並び順：
+	<input type="radio" name="order" ng-model="order" value="name"> 名前
+	<input type="radio" name="order" ng-model="order" value="age"> 名前
+	</div>
+
+	<div>
+		逆にする：<input type="checkbox" ng-model="reverse">
+	</div>
+
+	<ul ng-repeat="member in members | filter:search | orderBy:order:reverse">
+		<li>{{member.name}} ({{member.age}})</li>
+	</ul>
+
+</div>
+</body>
+</html>
